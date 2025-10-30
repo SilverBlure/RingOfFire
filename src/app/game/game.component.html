@@ -5,7 +5,7 @@
     }
     <img (click)="drawCard()"  class="top-card" style="right: 25px;" src="./../../assets/img/cards/card_cover.png">
     @if(pickCardAnimation){
-        <img (click)="drawCard()"  [class.pick-Card]="" class=" pick-Card" style="right: 25px;" src="./../../assets/img/cards/ace_1.png">
+        <img (click)="drawCard()"  [class.pick-Card]="" class=" pick-Card" style="right: 25px;" src="./../../assets/img/cards/{{this.currentCard}}.png">
     }
 </div>
 </div>
