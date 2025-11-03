@@ -1,22 +1,33 @@
 import { Component } from '@angular/core';
-import {MatDialogModule} from '@angular/material/dialog';
+import {MatDialogModule, MatDialogRef} from '@angular/material/dialog';
 import { MatFormField } from '@angular/material/form-field';
 import { MatLabel } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
+import { MatInputModule} from '@angular/material/input'
+import { MatButtonModule } from '@angular/material/button';
 
 
 @Component({
   selector: 'app-dialog-add-player',
   standalone: true,
-  imports: [MatDialogModule, MatFormField, MatLabel],
+  imports: [MatDialogModule, MatFormField, MatLabel, FormsModule, MatInputModule, MatButtonModule],
   templateUrl: './dialog-add-player.component.html',
   styleUrl: './dialog-add-player.component.scss'
 })
 export class DialogAddPlayerComponent {
 
 
+  
+  
+  constructor(private dialogRef: MatDialogRef<DialogAddPlayerComponent>) {}
+
   name: string = "";
 
-  onNoClick(){
-    
+  close(){
+    this.dialogRef.close()
   }
+
+  animal(){
+  
+}
 }
