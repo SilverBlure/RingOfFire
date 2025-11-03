@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { StartScreenComponent } from './start-screen/start-screen.component';
+import {MatButtonModule} from '@angular/material/button';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, StartScreenComponent
+  imports: [RouterOutlet, MatButtonModule, FormsModule
   
    ],
   templateUrl: './app.component.html',
